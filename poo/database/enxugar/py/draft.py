@@ -36,7 +36,7 @@ def main():
         if line == "":
             continue
         args = line.split()
-        cmd = args[0]
+        cmd = args[0].lstrip("$")
 
         if cmd == "end":
             break
@@ -76,7 +76,3 @@ def main():
 
         else:
             print("fail: comando invalido")
-
-
-if __name__ == "__main__":
-    main()
