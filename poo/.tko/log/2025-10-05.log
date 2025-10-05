@@ -24,3 +24,7 @@
 2025-10-05 01:58:31, MOVE, v:1, k:enxugar, mode:BACK
 2025-10-05 02:01:09, MOVE, v:1, k:enxugar, mode:PICK
 2025-10-05 02:04:50, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-05 02:05:35, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-05 02:12:28, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:78
+2025-10-05 02:12:28, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:78
+2025-10-05 02:13:31, MOVE, v:1, k:enxugar, mode:BACK

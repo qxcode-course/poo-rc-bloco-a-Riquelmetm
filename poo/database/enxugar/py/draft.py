@@ -36,7 +36,6 @@ def main():
         line: str = input().strip()
         print("$" + line)
         args: list[str] = line.split()
-        args[0] = args[0].lstrip("$")  # remove o $ se existir
 
         if args[0] == "end":
             break
