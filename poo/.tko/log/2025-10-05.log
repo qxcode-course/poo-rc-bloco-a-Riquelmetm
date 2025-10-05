@@ -28,3 +28,16 @@
 2025-10-05 02:12:28, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:78
 2025-10-05 02:12:28, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:78
 2025-10-05 02:13:31, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-05 02:14:05, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-05 02:14:09, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:77
+2025-10-05 02:14:13, EXEC, v:1, k:enxugar, mode:FULL, rate:100
+2025-10-05 02:30:30, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-05 02:30:34, MOVE, v:1, k:animal, mode:PICK
+2025-10-05 02:30:36, EXEC, v:1, k:animal, mode:FULL, rate:100, size:50
+2025-10-05 02:30:42, EXEC, v:1, k:animal, mode:FULL, rate:100
+2025-10-05 02:30:44, MOVE, v:1, k:animal, mode:BACK
+2025-10-05 02:31:11, MOVE, v:1, k:toalha, mode:PICK
+2025-10-05 02:31:13, EXEC, v:1, k:toalha, mode:LOCK, rate:0
+2025-10-05 02:31:17, EXEC, v:1, k:toalha, mode:LOCK, rate:0
+2025-10-05 02:31:18, MOVE, v:1, k:toalha, mode:BACK
+2025-10-05 02:31:24, MOVE, v:1, k:carro, mode:DOWN

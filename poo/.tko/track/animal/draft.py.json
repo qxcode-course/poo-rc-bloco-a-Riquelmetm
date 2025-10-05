@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-05_02-30-36",
+            "content": "class Animal:\n    def __init__(self, specie: str, sound: str):\n        self.specie: str = specie\n        self.sound: str = sound\n        self.age: int = 0\n\n    def __str__(self) -> str:  # toString\n        return f\"{self.specie}:{self.age}:{self.sound}\"\n\n    def ageBy(self, increment: int) -> None:\n        if self.age == 4:\n            print(f\"warning: {self.specie} morreu\")\n            return\n        self.age += increment\n        if self.age >= 4:\n            self.age = 4\n            print(f\"warning: {self.specie} morreu\")\n\n    def ismakeSound(self) -> str:\n        if self.age == 0:   \n            return \"---\"\n        if self.age in (1, 2, 3):\n            return self.sound\n        if self.age == 4:\n            return \"RIP\"\n\n\ndef main():\n    animal: Animal = Animal(\"\", \"\")\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        if args[0] == \"init\":\n            specie: str = args[1]\n            sound: str = args[2]\n            animal = Animal(specie, sound)\n        if args[0] == \"show\":\n            print(animal)\n        if args[0] == \"grow\":\n            increment: int = int(args[1])\n            animal.ageBy(increment)\n        if args[0] == \"noise\":\n            print(animal.ismakeSound())\n\n\nmain()\n",
+            "lines": "50"
+        }
+    ]
+}

@@ -17,7 +17,7 @@ class Animal:
             print(f"warning: {self.specie} morreu")
 
     def ismakeSound(self) -> str:
-        if self.age == 0:
+        if self.age == 0:   
             return "---"
         if self.age in (1, 2, 3):
             return self.sound
