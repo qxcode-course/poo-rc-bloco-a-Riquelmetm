@@ -27,3 +27,44 @@ class Towel:
 
     def __str__(self) -> str:
         return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
+    
+def main():
+    towel = None
+    while True:
+        line = input().strip()
+        if line == "":
+            continue
+        args = line.split()
+
+        cmd = args[0]
+
+        if cmd == "end":
+            break
+
+        elif cmd == "criar":
+            color = args[1]
+            size = args[2]
+            towel = Towel(color, size)
+
+        elif cmd == "mostrar":
+            print(towel)
+
+        elif cmd == "seca":
+            if towel.isDry():
+                print("sim")
+            else:
+                print("nao")
+
+        elif cmd == "enxugar":
+            amount = int(args[1])
+            towel.dry(amount)
+
+        elif cmd == "torcer":
+            towel.wringOut()
+
+        else:
+            print("fail: comando invalido")
+
+
+if __name__ == "__main__":
+    main()
