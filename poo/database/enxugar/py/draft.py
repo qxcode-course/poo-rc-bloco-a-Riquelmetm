@@ -1,83 +1,57 @@
 class Towel:
-    def __init__(self, color: str, size: str):
-        self.color = color
-        self.size = size
-        self.wetness = 0
-
-    def getMaxWetness(self) -> int:
-        if self.size == "P":
-            return 10
-        elif self.size == "M":
-            return 20
-        elif self.size == "G":
-            return 30
-        return 0
-
+    def __init__(self, color: str, size: str): # construtor
+        self.color: str = color # atributos
+        self.size: str = size
+        self.wetness: int = 0
+    
     def dry(self, amount: int) -> None:
         self.wetness += amount
-        if self.wetness >= self.getMaxWetness():
-            self.wetness = self.getMaxWetness()
+        if self.wetness >= self.isMaxWetness():
+            self.wetness = self.isMaxWetness()
             print("toalha encharcada")
 
-    def wringOut(self) -> None:
-        self.wetness = 0
-
-    def isDry(self) -> bool:
+    def isDry(self):
         return self.wetness == 0
 
-    def __str__(self) -> str:
+    def wringOut(self):
+        self.wetness = 0
+
+    def isMaxWetness(self) -> int:
+        if self.size == "P": # early return
+            return 10
+        if self.size == "M":
+            return 20
+        if self.size == "G":
+            return 30
+        return 0 # default return
+
+    def __str__(self) -> str: # toString
         return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
 
+def main(): 
+    towel: Towel = Towel("", "") # 2: criar um obj com qq valor inicial
+    while True: # 3: loop infinito
 
-def main():
-    towel = None
-    while True:
-        line = input().strip()
-        if line == "":
-            continue
-        args = line.split()
+        line: str = input() # 4: perguntar ao usuario
+        print("$" + line) # echo
+        args: list[str] = line.split(" ") # 5: separar argumentos
 
-        cmd = args[0].lstrip("$")
-
-        if cmd == "end":
+        if args[0] == "end":
             break
-
-        elif cmd == "criar":
-            color = args[1]
-            size = args[2]
+        elif args[0] == "criar": # color size
+            color: str = args[1]
+            size: str = args[2]
             towel = Towel(color, size)
+        elif args[0] == "seca":
+            print("sim" if towel.isDry() else "nao")
+        elif args[0] == "torcer":
+            towel.wringOut()
+        elif args[0] == "enxugar":
+            amount: int = int(args[1])
+            towel.dry(amount)
+        elif args[0] == "mostrar":
+            print(towel)
+        else: # 7: erro
+            print("fail: comando não encontrado")
 
-        elif cmd == "mostrar":
-            if towel is None:
-                print("fail: toalha nao criada")
-            else:
-                print(towel)
-
-        elif cmd == "seca":
-            if towel is None:
-                print("fail: toalha nao criada")
-            else:
-                if towel.isDry():
-                    print("sim")
-                else:
-                    print("nao")
-
-        elif cmd == "enxugar":
-            if towel is None:
-                print("fail: toalha nao criada")
-            else:
-                amount = int(args[1])
-                towel.dry(amount)
-
-        elif cmd == "torcer":
-            if towel is None:
-                print("fail: toalha nao criada")
-            else:
-                towel.wringOut()
-
-        else:
-            print("fail: comando invalido")
-
-
-if __name__ == "__main__":
-    main()
+main() # passo 1

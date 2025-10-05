@@ -10,9 +10,9 @@ expanded:
 - bloco_b-primeiras-classes
 tasks: {}
 flags:
-  quests: 0
-  tracks: 0
-  tasks: 0
+  quests: 1
+  tracks: 1
+  tasks: 1
   graph: 0
   xray: 0
 index: enxugar

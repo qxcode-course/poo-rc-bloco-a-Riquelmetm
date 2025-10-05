@@ -11,3 +11,14 @@
 2025-10-05 01:42:30, MOVE, v:1, k:enxugar, mode:BACK
 2025-10-05 01:43:04, MOVE, v:1, k:enxugar, mode:PICK
 2025-10-05 01:45:43, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-05 01:47:51, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-05 01:47:54, EXEC, v:1, k:enxugar, mode:FREE, size:83
+2025-10-05 01:54:28, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-05 01:54:32, MOVE, v:1, k:animal, mode:PICK
+2025-10-05 01:54:40, MOVE, v:1, k:animal, mode:BACK
+2025-10-05 01:54:52, MOVE, v:1, k:toalha, mode:PICK
+2025-10-05 01:55:00, MOVE, v:1, k:toalha, mode:BACK
+2025-10-05 01:55:15, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-05 01:55:30, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-05 01:55:33, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-05 01:58:31, MOVE, v:1, k:enxugar, mode:BACK
