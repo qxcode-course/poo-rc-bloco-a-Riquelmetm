@@ -27,7 +27,8 @@ class Towel:
 
     def __str__(self) -> str:
         return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
-    
+
+
 def main():
     towel = None
     while True:
@@ -35,7 +36,6 @@ def main():
         if line == "":
             continue
         args = line.split()
-
         cmd = args[0]
 
         if cmd == "end":
@@ -47,20 +47,32 @@ def main():
             towel = Towel(color, size)
 
         elif cmd == "mostrar":
-            print(towel)
+            if towel is None:
+                print("fail: toalha nao criada")
+            else:
+                print(towel)
 
         elif cmd == "seca":
-            if towel.isDry():
-                print("sim")
+            if towel is None:
+                print("fail: toalha nao criada")
             else:
-                print("nao")
+                if towel.isDry():
+                    print("sim")
+                else:
+                    print("nao")
 
         elif cmd == "enxugar":
-            amount = int(args[1])
-            towel.dry(amount)
+            if towel is None:
+                print("fail: toalha nao criada")
+            else:
+                amount = int(args[1])
+                towel.dry(amount)
 
         elif cmd == "torcer":
-            towel.wringOut()
+            if towel is None:
+                print("fail: toalha nao criada")
+            else:
+                towel.wringOut()
 
         else:
             print("fail: comando invalido")
