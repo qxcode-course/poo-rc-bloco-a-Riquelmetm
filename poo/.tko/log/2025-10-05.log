@@ -1,0 +1,5 @@
+2025-10-05 01:23:16, MOVE, v:1, k:toalha, mode:PICK
+2025-10-05 01:23:51, EXEC, v:1, k:toalha, mode:FREE, size:57
+2025-10-05 01:24:43, MOVE, v:1, k:toalha, mode:BACK
+2025-10-05 01:24:47, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-05 01:25:09, MOVE, v:1, k:enxugar, mode:BACK

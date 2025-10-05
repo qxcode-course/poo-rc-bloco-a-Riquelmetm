@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-05_01-23-51",
+            "content": "class Towell:\n    def __init__(self, color: str = \"\", size: str = \"\"):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n\n    def getMaxwetness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0  # Valor padr\u00e3o para tamanhos n\u00e3o reconhecidos\n\n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n        if self.wetness > self.getMaxwetness():\n            self.wetness = self.getMaxwetness()\n            print(\"toalha encharcada\")\n\n    def wringOut(self) -> None:\n        self.wetness = 0\n\n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n    def show(self) -> None:\n        print(self)\n\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"\n\n\ndef main():\n    towel: Towell = Towell(\"\", \"\")\n    while True:\n        line: str = input(\"Digite um comando: \")\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"new\":\n            if len(args) < 3:\n                print(\"fail: comando 'new' necessita de 2 argumentos.\")\n                continue\n            color: str = args[1]\n            size: str = args[2]\n            towel = Towell(color, size)\n        elif args[0] == \"show\":\n            print(towel)  # Aqui imprime o objeto towel, chamando o m\u00e9todo\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+            "lines": "57"
+        }
+    ]
+}
