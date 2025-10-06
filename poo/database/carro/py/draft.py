@@ -11,8 +11,23 @@ class Carro:
         self.pass_ +=1
         if self.pass_ >= self.passMax:
             print("fail: limite de pessoas atingido")
+            self.pass_ -=1
     def leave(self):
         self.pass_ -=1
         if self.pass_ <= 0:
             print("fail: nao ha ninguem no carro")
+    def fuel_increment(self):
+        self.gas = int(input())
+        if self.gas > self.gasMax:
+            self.gas = self.gasMax - self.gas
+    def drive_distance(self):
     
+
+def main()
+    while True :
+        comando = input().strip().split()
+        if comando == "$end":
+            break
+        if comando == "$drive":
+            drive_distance()
+
