@@ -5,97 +5,56 @@ class Carro:
         self.passMax = 2
         self.gas = 0
         self.gasMax = 100
-
     def __str__(self) -> str:
         return f"pass: {self.pass_}, gas: {self.gas}, km: {self.km}"
-
     def enter(self):
-        if self.pass_ >= self.passMax:
+        self.pass_ +=1
+        if self.pass_ > self.passMax:
             print("fail: limite de pessoas atingido")
-        else:
-            self.pass_ += 1
-
+            self.pass_ -=1
     def leave(self):
-        if self.pass_ == 0:
+        if self.pass_ <= 0:
             print("fail: nao ha ninguem no carro")
         else:
             self.pass_ -= 1
-
-    def fuel(self, qtd: int):
-        # adiciona qtd ao tanque; descarta excesso
-        if qtd <= 0:
-            return
-        self.gas += qtd
+    def fuel_increment(self):
+        self.gas = int(input())
         if self.gas > self.gasMax:
-            self.gas = self.gasMax
-
-    def drive(self, distancia: int):
-        if self.pass_ == 0:
-            print("fail: nao ha ninguem no carro")
+            self.gas = self.gasMax - self.gas
+    def drive_distance(self, distancia:int):
+        if self.pass_ <=0:
+            print("fail: não há ninguém no carro")
             return
-        if self.gas == 0:
+        if self.gas <=0:
             print("fail: tanque vazio")
             return
-
-        if self.gas >= distancia:
+        distancia = int(input())
+        if self.gas > distancia:
+            self.km = distancia
             self.gas -= distancia
-            self.km += distancia
         else:
-
-            percorrido = self.gas
-            self.km += percorrido
+            print(f"fail: tanque vazio apos andar {self.gas} km")
+            self.km += self.gas
             self.gas = 0
-            print(f"fail: tanque vazio apos andar {percorrido} km")
 
 
+        
 def main():
     carro = Carro()
-    while True:
-        try:
-            line = input().strip()
-        except EOFError:
+    while True :
+        comando = input()
+        if comando == "end":
             break
-
-        if not line:
-            continue
-
-        parts = line.split()
-        cmd = parts[0]
-
-        if cmd.startswith("$"):
-            cmd = cmd[1:]
-
-        if cmd == "end":
-            break
-
-        elif cmd == "show":
-            print(carro)
-
-        elif cmd == "enter":
+        elif comando == "enter":
             carro.enter()
-
-        elif cmd == "leave":
+        elif comando == "leave":
             carro.leave()
-
-        elif cmd == "fuel":
-            if len(parts) >= 2:
-                try:
-                    qtd = int(parts[1])
-                except:
-                    continue
-                carro.fuel(qtd)
-
-        elif cmd == "drive":
-            if len(parts) >= 2:
-                try:
-                    dist = int(parts[1])
-                except:
-                    continue
-                carro.drive(dist)
-
-        else:
-            continue
+        elif comando == "show":
+            print(carro)
+        elif comando == "fuel":
+            carro.fuel_increment()
+        elif comando == "drive":
+            carro.drive_distance()
 
 
-if __name__ == "__main__":
-    main()
+
