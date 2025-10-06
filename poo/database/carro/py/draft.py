@@ -27,6 +27,7 @@ class Carro:
         if self.gas <=0:
             print("fail: tanque vazio")
             return
+        distancia = int(input())
         if self.gas > distancia:
             self.km = distancia
             self.gas -= distancia
@@ -37,10 +38,22 @@ class Carro:
 
 
         
-
 def main():
+    carro = Carro()
     while True :
-        print(Carro)
-        print("oi")
-    
+        comando = input()
+        if comando == "end":
+            break
+        elif comando == "enter":
+            carro.enter()
+        elif comando == "leave":
+            carro.leave()
+        elif comando == "show":
+            print(carro)
+        elif comando == "fuel":
+            carro.fuel_increment()
+        elif comando == "drive":
+            carro.drive_distance()
+
+
 

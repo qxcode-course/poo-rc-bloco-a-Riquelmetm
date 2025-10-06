@@ -1,0 +1,10 @@
+2025-10-06 02:23:42, MOVE, v:1, k:carro, mode:PICK
+2025-10-06 02:23:45, EXEC, v:1, k:carro, mode:FREE, size:46
+2025-10-06 02:24:05, EXEC, v:1, k:carro, mode:FULL, rate:0
+2025-10-06 02:24:27, MOVE, v:1, k:carro, mode:BACK
+2025-10-06 02:24:28, MOVE, v:1, k:carro, mode:PICK
+2025-10-06 02:24:34, EXEC, v:1, k:carro, mode:FREE
+2025-10-06 02:24:50, MOVE, v:1, k:carro, mode:BACK
+2025-10-06 02:24:52, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-06 02:24:54, EXEC, v:1, k:enxugar, mode:FREE
+2025-10-06 02:40:37, MOVE, v:1, k:enxugar, mode:BACK

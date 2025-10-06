@@ -7,6 +7,7 @@ version: 0.0.1
 database: database
 expanded:
 - campanha-principal
+- bloco_b-primeiras-classes
 tasks:
   animal: '{rate:100}'
   enxugar: '{rate:100}'
@@ -16,4 +17,4 @@ flags:
   tasks: 1
   graph: 0
   xray: 0
-index: bloco_b-primeiras-classes
+index: enxugar
