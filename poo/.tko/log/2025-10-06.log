@@ -8,3 +8,6 @@
 2025-10-06 02:24:52, MOVE, v:1, k:enxugar, mode:PICK
 2025-10-06 02:24:54, EXEC, v:1, k:enxugar, mode:FREE
 2025-10-06 02:40:37, MOVE, v:1, k:enxugar, mode:BACK
+2025-10-06 02:41:04, MOVE, v:1, k:carro, mode:PICK
+2025-10-06 02:41:06, EXEC, v:1, k:carro, mode:FULL, rate:0, size:59
+2025-10-06 02:45:05, MOVE, v:1, k:carro, mode:BACK
