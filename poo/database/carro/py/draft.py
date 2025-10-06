@@ -20,14 +20,21 @@ class Carro:
         self.gas = int(input())
         if self.gas > self.gasMax:
             self.gas = self.gasMax - self.gas
-    def drive_distance(self):
-    
+    def drive_distance(self, distancia:int):
+        if self.pass_ <=0:
+            print("fail: não há ninguém no carro")
+            return
+        if self.gas <=0:
+            print("fail: tanque vazio")
+            return
+        if self.gas > distancia:
+            self.km = distancia
+            self.gas -= distancia
+            if self.gas <= 0:
+                
+        
 
 def main()
     while True :
         comando = input().strip().split()
-        if comando == "$end":
-            break
-        if comando == "$drive":
-            drive_distance()
 
