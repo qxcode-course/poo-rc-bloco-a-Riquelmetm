@@ -21,43 +21,81 @@ class Carro:
         else:
             self.pass_ -= 1
 
-    def fuel_increment(self, qtd: int):
+    def fuel(self, qtd: int):
+        # adiciona qtd ao tanque; descarta excesso
+        if qtd <= 0:
+            return
         self.gas += qtd
         if self.gas > self.gasMax:
             self.gas = self.gasMax
 
-    def drive_distance(self, distancia: int):
+    def drive(self, distancia: int):
         if self.pass_ == 0:
             print("fail: nao ha ninguem no carro")
             return
         if self.gas == 0:
             print("fail: tanque vazio")
             return
+
         if self.gas >= distancia:
-            self.km += distancia
             self.gas -= distancia
+            self.km += distancia
         else:
-            print(f"fail: tanque vazio apos andar {self.gas} km")
-            self.km += self.gas
+
+            percorrido = self.gas
+            self.km += percorrido
             self.gas = 0
+            print(f"fail: tanque vazio apos andar {percorrido} km")
 
 
 def main():
     carro = Carro()
     while True:
-        comando = input().strip().split()
-        if comando[0] == "end":
+        try:
+            line = input().strip()
+        except EOFError:
             break
-        elif comando[0] == "enter":
-            carro.enter()
-        elif comando[0] == "leave":
-            carro.leave()
-        elif comando[0] == "show":
+
+        if not line:
+            continue
+
+        parts = line.split()
+        cmd = parts[0]
+
+        if cmd.startswith("$"):
+            cmd = cmd[1:]
+
+        if cmd == "end":
+            break
+
+        elif cmd == "show":
             print(carro)
-        elif comando[0] == "fuel":
-            carro.fuel_increment(int(comando[1]))
-        elif comando[0] == "drive":
-            carro.drive_distance(int(comando[1]))
+
+        elif cmd == "enter":
+            carro.enter()
+
+        elif cmd == "leave":
+            carro.leave()
+
+        elif cmd == "fuel":
+            if len(parts) >= 2:
+                try:
+                    qtd = int(parts[1])
+                except:
+                    continue
+                carro.fuel(qtd)
+
+        elif cmd == "drive":
+            if len(parts) >= 2:
+                try:
+                    dist = int(parts[1])
+                except:
+                    continue
+                carro.drive(dist)
+
+        else:
+            continue
 
 
-main()
+if __name__ == "__main__":
+    main()
