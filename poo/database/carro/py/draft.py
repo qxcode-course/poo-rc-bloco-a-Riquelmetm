@@ -30,11 +30,17 @@ class Carro:
         if self.gas > distancia:
             self.km = distancia
             self.gas -= distancia
-            if self.gas <= 0:
-                
+        else:
+            print(f"fail: tanque vazio apos andar {self.gas} km")
+            self.km += self.gas
+            self.gas = 0
+
+
         
 
-def main()
+def main():
     while True :
-        comando = input().strip().split()
+        print(Carro)
+        print("oi")
+    
 
