@@ -54,7 +54,8 @@ def main():
             print(carro)
         if args[0] == "leave":
             carro.leave()
-
+        if args[0] == "enter":
+            carro.enter()
         if args[0] == "drive":
             distancia = int(input())
             carro.drive_distance(distancia)

@@ -2,3 +2,7 @@
 2025-10-07 16:11:50, EXEC, v:1, k:carro, mode:FULL, rate:10, size:63
 2025-10-07 16:15:03, EXEC, v:1, k:carro, mode:FULL, rate:10, size:65
 2025-10-07 16:15:07, MOVE, v:1, k:carro, mode:BACK
+2025-10-07 16:15:37, MOVE, v:1, k:carro, mode:PICK
+2025-10-07 16:15:38, EXEC, v:1, k:carro, mode:FULL, rate:10
+2025-10-07 16:18:10, EXEC, v:1, k:carro, mode:FULL, rate:50, size:66
+2025-10-07 16:18:48, MOVE, v:1, k:carro, mode:BACK
