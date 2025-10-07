@@ -17,8 +17,7 @@ class Carro:
             print("fail: nao ha ninguem no carro")
         else:
             self.pass_ -= 1
-    def fuel_increment(self):
-        self.gas = int(input())
+    def fuel_increment(self,):
         if self.gas > self.gasMax:
             self.gas = self.gasMax - self.gas
     def drive_distance(self, distancia:int):
@@ -28,33 +27,37 @@ class Carro:
         if self.gas <=0:
             print("fail: tanque vazio")
             return
-        distancia = int(input())
         if self.gas > distancia:
             self.km = distancia
             self.gas -= distancia
         else:
             print(f"fail: tanque vazio apos andar {self.gas} km")
             self.km += self.gas
-            self.gas = 0
+            self.gas = 0   
 
 
-        
 def main():
     carro = Carro()
-    while True :
-        comando = input()
-        if comando == "end":
+
+    while True:
+        line: str = input()
+        print("$" + line)
+        args: list[str] = line.split(" ")
+
+        if args[0] == "end":
             break
-        elif comando == "enter":
-            carro.enter()
-        elif comando == "leave":
-            carro.leave()
-        elif comando == "show":
-            print(carro)
-        elif comando == "fuel":
+        if args[0] == "fuel":
             carro.fuel_increment()
-        elif comando == "drive":
-            carro.drive_distance()
+        if args[0] == "show":
+            print(carro)
+        if args[0] == "leave":
+            carro.leave()
+
+        if args[0] == "drive":
+            distancia = int(input())
+            carro.drive_distance(distancia)
 
 
+
+main()
 

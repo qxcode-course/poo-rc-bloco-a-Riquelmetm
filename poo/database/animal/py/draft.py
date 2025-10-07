@@ -19,14 +19,15 @@ class Animal:
     def ismakeSound(self) -> str:
         if self.age == 0:   
             return "---"
-        if self.age in (1, 2, 3):
-            return self.sound
         if self.age == 4:
             return "RIP"
+        return self.sound
 
 
 def main():
-    animal: Animal = Animal("", "")
+    # animal = Animal()
+    animal = Animal("", "")
+
     while True:
         line: str = input()
         print("$" + line)
