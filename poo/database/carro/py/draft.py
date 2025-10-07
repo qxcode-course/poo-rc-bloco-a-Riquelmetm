@@ -17,7 +17,8 @@ class Carro:
             print("fail: nao ha ninguem no carro")
         else:
             self.pass_ -= 1
-    def fuel_increment(self,):
+    def fuel_increment(self,fuel:int):
+        self.gas = fuel
         if self.gas > self.gasMax:
             self.gas = self.gasMax - self.gas
     def drive_distance(self, distancia:int):
@@ -47,7 +48,8 @@ def main():
         if args[0] == "end":
             break
         if args[0] == "fuel":
-            carro.fuel_increment()
+            fuel = int(input())
+            carro.fuel_increment(fuel)
         if args[0] == "show":
             print(carro)
         if args[0] == "leave":
