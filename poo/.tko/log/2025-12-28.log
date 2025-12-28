@@ -1,0 +1,16 @@
+2025-12-28 20:57:42, MOVE, v:1, k:animal, mode:PICK
+2025-12-28 20:57:43, EXEC, v:1, k:animal, mode:FULL, rate:100, size:51
+2025-12-28 20:57:45, MOVE, v:1, k:animal, mode:BACK
+2025-12-28 20:59:20, MOVE, v:1, k:carro, mode:PICK
+2025-12-28 20:59:21, EXEC, v:1, k:carro, mode:FULL, rate:100, size:68
+2025-12-28 20:59:30, MOVE, v:1, k:carro, mode:BACK
+2025-12-28 21:01:06, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:18, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:50, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:50, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:51, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:52, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:52, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:53, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:53, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-28 21:01:59, MOVE, v:1, k:calculadora, mode:DOWN

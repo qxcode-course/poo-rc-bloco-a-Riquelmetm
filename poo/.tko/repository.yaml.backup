@@ -1,16 +1,27 @@
-remote: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-lang: py
-filter:
-- BLOCO_A
-- BLOCO_B
-version: 0.0.1
-database: database
+version: '0.2'
+sources:
+- database: database
+  link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+  type: remote
+  branch: master
+  cache_path: ''
+  cache_timestamp: '2025-12-28 20:56:46'
+  filters:
+  - BLOCO_A
+  - BLOCO_B
+- database: local
+  link: ''
+  type: local
+  branch: master
+  cache_path: ''
+  cache_timestamp: ''
+  filters: null
 expanded:
 - campanha-principal
-- bloco_b-primeiras-classes
+- bloco_a-primeiras-classes
 tasks:
   animal: '{rate:100}'
-  carro: '{rate:50}'
+  carro: '{rate:100}'
   enxugar: '{rate:100}'
 flags:
   quests: 1
@@ -18,4 +29,5 @@ flags:
   tasks: 1
   graph: 0
   xray: 0
-index: carro
+lang: py
+selected: calculadora
