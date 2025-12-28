@@ -18,4 +18,20 @@ class Calculadora:
             return
         self.display = a + b
         self.bateria -= 1
+        return self.display
+    def dividir (self, den, num):
+        if den == 0:
+            print("fail: divisao por zero.")
+            return
+        elif self.bateria <= 0:
+             print("fail: bateria insuficiente.")
+             return
+        self.display = num / den
+        return self.display
     
+def main()
+    sla = input()
+    print ("$" + sla)
+    slaa = sla.split(" ")
+
+    if slaa[0] == 
