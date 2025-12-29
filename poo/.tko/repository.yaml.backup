@@ -5,7 +5,7 @@ sources:
   type: remote
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-12-28 20:56:46'
+  cache_timestamp: '2025-12-29 02:57:28'
   filters:
   - BLOCO_A
   - BLOCO_B
@@ -19,9 +19,12 @@ sources:
 expanded:
 - campanha-principal
 - bloco_a-primeiras-classes
+- bloco_b-modificadores-de-acesso
+- bloco_b-agregação-simples
 tasks:
   animal: '{rate:100}'
   carro: '{rate:100}'
+  calculadora: '{alone:10, study:40}'
   enxugar: '{rate:100}'
 flags:
   quests: 1

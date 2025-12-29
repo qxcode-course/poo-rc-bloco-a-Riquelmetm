@@ -1,0 +1,20 @@
+2025-12-29 02:57:31, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:57:34, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:57:35, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:57:36, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:57:37, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:57:48, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:57:53, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:58:53, MOVE, v:1, k:animal, mode:PICK
+2025-12-29 02:58:55, MOVE, v:1, k:animal, mode:BACK
+2025-12-29 02:58:57, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:59:29, SELF, v:1, k:calculadora, alone:10
+2025-12-29 02:59:34, MOVE, v:1, k:enxugar, mode:PICK
+2025-12-29 02:59:35, EXEC, v:1, k:enxugar, mode:FULL, rate:100
+2025-12-29 02:59:36, MOVE, v:1, k:enxugar, mode:BACK
+2025-12-29 02:59:37, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 02:59:50, MOVE, v:1, k:roupa, mode:DOWN
+2025-12-29 03:08:26, SELF, v:1, k:calculadora, alone:10, study:40
+2025-12-29 03:08:27, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 03:09:04, MOVE, v:1, k:calculadora, mode:DOWN
+2025-12-29 03:09:05, MOVE, v:1, k:calculadora, mode:DOWN
